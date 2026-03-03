@@ -20,5 +20,25 @@
         <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
     </div>
 {% endif %}
+<button onclick="downloadQR()">Download QR Code</button>
+<script>
+    function downloadQR() {
+        // 1. Get the image element
+        const img = document.querySelector('img');
+        if (!img) return;
+    
+        // 2. Create a temporary link element
+        const link = document.createElement('a');
+        
+        // 3. Set the link's source to the image source (the Base64 string)
+        link.href = img.src;
+        
+        // 4. Give the file a name
+        link.download = 'my_qrcode.png';
+        
+        // 5. Trigger the download
+        link.click();
+    }
+    </script>
 </body>
 </html>
