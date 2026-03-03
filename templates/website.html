@@ -14,5 +14,11 @@
         <input type="text" name="text_input" placeholder="Enter link or text here" required>
         <button type="submit">Generate QR</button>
     </form>
+    {% if qr_code %}
+    <div style="margin-top: 20px;">
+        <h3>Your Generated QR Code:</h3>
+        <img src="data:image/png;base64,{{ qr_code }}" alt="QR Code">
+    </div>
+{% endif %}
 </body>
 </html>
