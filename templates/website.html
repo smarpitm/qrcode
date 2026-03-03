@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QR Generator</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        input { padding: 10px; width: 300px; }
+        button { padding: 10px 20px; cursor: pointer; background: #007bff; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <h1>Simple QR Code Generator</h1>
+    <form action="/generate" method="post">
+        <input type="text" name="text_input" placeholder="Enter link or text here" required>
+        <button type="submit">Generate QR</button>
+    </form>
+</body>
+</html>
